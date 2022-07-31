@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-
+# -*- coding: utf-8 -*-
 class Rectangle:
-
-
-    def __init__(self):
-        pass
+    pass
