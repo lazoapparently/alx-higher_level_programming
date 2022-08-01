@@ -1,11 +1,13 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """
 Describe a rectangle.
 """
+
 class Rectangle:
-"""
-Define a rectangle object class
-"""
+    """
+    Define a rectangle object class
+    """
     def __init__(self, width=0, height=0):
     """
     Args:

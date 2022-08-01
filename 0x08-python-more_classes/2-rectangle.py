@@ -1,93 +1,102 @@
 #!/usr/bin/python3
-"""
-Describe a rectangle.
-"""
-
+# -*- coding: utf-8 -*-
 
 class Rectangle:
+    """
+    class Rectangle that defines a rectangle figure
+
+    Attributes:
+        empty
+    """
+
+    def __init__(self, width=0, height=0):
         """
-            Define a rectangle object class
-                """
+        Init method for Rectangle
 
-                    def __init__(self, width=0, height=0):
-                                """
-                                        Args:
-                                                    width (int): Default width for the class object.
-                                                                height (int): Default height for the class object.
-                                                                        """
-                                                                                self.width = width
-                                                                                        self.height = height
+        Attributes:
+            width (int, optional): The width of the rectangle
+            height (int, optional): The height of the rectangle
+        self.width = width
+        self.height = height
+        """
+        self.__height = height
+        self.__width = width
 
-                                                                                            @property
-                                                                                                def width(self):
-                                                                                                        """
-                                                                                                                Setter for the private attribute width
-                                                                                                                        Args:
-                                                                                                                                        None
-                                                                                                                                                Return:
-                                                                                                                                                                The return. The private attribute width
-                                                                                                                                                                        """
+    @property
+    def height(self):
+        """
 
-                                                                                                                                                                                return self.__width
+        Property height to retrive it
 
-                                                                                                                                                                                    @width.setter
-                                                                                                                                                                                        def width(self, value):
-                                                                                                                                                                                                """
-                                                                                                                                                                                                        Setter for the private attribute width
-                                                                                                                                                                                                                Args:
-                                                                                                                                                                                                                                Value (int): value to set
-                                                                                                                                                                                                                                        Return:
-                                                                                                                                                                                                                                                        The return. None
-                                                                                                                                                                                                                                                                """
+        Returns:
+            height (int): The height of the rectangle
+        """
+        return self.__height
+    
+    @height.setter
+    def height(self, value):
+        """
+        Setter height of the rectangle
 
-                                                                                                                                                                                                                                                                        if type(value) is not int:
-                                                                                                                                                                                                                                                                                    raise TypeError("width must be an integer")
-                                                                                                                                                                                                                                                                                            if value < 0:
-                                                                                                                                                                                                                                                                                                        raise ValueError("width must be >= 0")
+        Attributes:
+            height (int): The height of the rectangle
 
-                                                                                                                                                                                                                                                                                                                self.__width = value
+        Raises:
+            TypeError: If height is not an integer
+            ValueError: If height is less than 0
+        """
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        elif value < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = value
 
-                                                                                                                                                                                                                                                                                                                    @property
-                                                                                                                                                                                                                                                                                                                        def height(self):
-                                                                                                                                                                                                                                                                                                                                """
-                                                                                                                                                                                                                                                                                                                                        Getter for the private attribute height
-                                                                                                                                                                                                                                                                                                                                                Args:
-                                                                                                                                                                                                                                                                                                                                                                None
-                                                                                                                                                                                                                                                                                                                                                                        Return:
-                                                                                                                                                                                                                                                                                                                                                                                        The return. The private attribute height
-                                                                                                                                                                                                                                                                                                                                                                                                """
+    @property
+    def width(self):
+        """
+        Property width to retrive it
 
-                                                                                                                                                                                                                                                                                                                                                                                                        return self.__height
+        Returns:
+            width (int): The width of the rectangle
+        """
+        return self.__width
 
-                                                                                                                                                                                                                                                                                                                                                                                                            @height.setter
-                                                                                                                                                                                                                                                                                                                                                                                                                def height(self, value):
-                                                                                                                                                                                                                                                                                                                                                                                                                        """
-                                                                                                                                                                                                                                                                                                                                                                                                                                Setter for the private attribute height
-                                                                                                                                                                                                                                                                                                                                                                                                                                        Args:
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        Value (int): value to set
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                Return:
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                The return. None
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        """
+    @width.setter
+    def width(self, value):
+        """
+        Setter width of the rectangle
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                if type(value) is not int:
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            raise TypeError("height must be an integer")
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    if value < 0:
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                raise ValueError("height must be >= 0")
+        Attributes:
+            width (int): The width of the rectangle
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        self.__height = value
+        Raises:
+             TypeError: If width is not an integer
+             ValueError: If width is less than 0
+        """
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        elif value < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = value
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            def area(self):
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    """
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Return:
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            The return. The area of the rectangle object
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    """
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            return (self.__width * self.__height)
+    def area(self):
+        """
+        Calculate the area of a rectangle
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                def perimeter(self):
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        """
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Return:
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                The return. The perimeter of the rectangle object
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        """
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                if self.__width == 0 or self.__height == 0:
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            return 0
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    return 2 * (self.__width + self.__height)
+        Returns:
+            The area of the recttangle
+        """
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """
+        Calculate perimeter of a rectangle
+
+        Returns:
+            The perimeter of the rectangle
+        """
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return 2 * (self.__width + self.__height)
