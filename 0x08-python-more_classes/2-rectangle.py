@@ -1,50 +1,23 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
+"""
+Defines a class Rectangle
+"""
 
 class Rectangle:
-    """
-    class Rectangle that defines a rectangle figure
-
-    Attributes:
-        empty
-    """
-
+    """class Rectangle that defines a rectangle figure"""
     def __init__(self, width=0, height=0):
-        """
-        Init method for Rectangle
-
-        Attributes:
-            width (int, optional): The width of the rectangle
-            height (int, optional): The height of the rectangle
+        """Init method for Rectangle"""
         self.width = width
         self.height = height
-        """
-        self.__height = height
-        self.__width = width
 
     @property
     def height(self):
-        """
-
-        Property height to retrive it
-
-        Returns:
-            height (int): The height of the rectangle
-        """
+        """getter for the private instance height"""
         return self.__height
     
     @height.setter
     def height(self, value):
-        """
-        Setter height of the rectangle
-
-        Attributes:
-            height (int): The height of the rectangle
-
-        Raises:
-            TypeError: If height is not an integer
-            ValueError: If height is less than 0
-        """
+        """setter for the private instance attribute height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         elif value < 0:
@@ -54,26 +27,12 @@ class Rectangle:
 
     @property
     def width(self):
-        """
-        Property width to retrive it
-
-        Returns:
-            width (int): The width of the rectangle
-        """
+        """getter for the private instance attribute width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """
-        Setter width of the rectangle
-
-        Attributes:
-            width (int): The width of the rectangle
-
-        Raises:
-             TypeError: If width is not an integer
-             ValueError: If width is less than 0
-        """
+        """setter for the private instance attribute width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -82,21 +41,11 @@ class Rectangle:
             self.__width = value
 
     def area(self):
-        """
-        Calculate the area of a rectangle
-
-        Returns:
-            The area of the recttangle
-        """
+        """Calculate the area of the rectangle"""
         return self.__width * self.__height
 
     def perimeter(self):
-        """
-        Calculate perimeter of a rectangle
-
-        Returns:
-            The perimeter of the rectangle
-        """
+        """Calculate perimeter of a rectangle"""
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
