@@ -1,17 +1,12 @@
 #!/usr/bin/python3
 """
-Create a Class Square width:
-    - size, position private propreties
-    - method of area and method of print_square
-    - getters & setters.
-"""
+Create a Class object"""
 
 
 class Square:
     """Class Square creation"""
-
     def __init__(self, size=0, position=(0. 0)):
-        "Create a square with the size and position"""
+    """Create a square with the size and position"""
         self.size = size
         self.position = position
 
