@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-'''A module containing IO functions.
-'''
+"""A module containing IO functions.
+"""
 from json import JSONEncoder
 
 
@@ -10,5 +10,6 @@ def to_json_string(my_obj):
         my_obj: An object to convert to JSONte to.
     Returns:
         str: A JSON rep of object.
+	otherwise an eception is thrown
     """
     return JSONEcoder().encode(my_obj)
