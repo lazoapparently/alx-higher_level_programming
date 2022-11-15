@@ -10,6 +10,6 @@ def to_json_string(my_obj):
         my_obj: An object to convert to JSONte to.
     Returns:
         str: A JSON rep of object.
-	otherwise an eception is thrown
+        otherwise an eception is thrown
     """
     return JSONEncoder().encode(my_obj)
