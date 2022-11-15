@@ -12,4 +12,4 @@ def to_json_string(my_obj):
         str: A JSON rep of object.
 	otherwise an eception is thrown
     """
-    return JSONEcoder().encode(my_obj)
+    return JSONEncoder().encode(my_obj)
