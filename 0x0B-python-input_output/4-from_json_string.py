@@ -4,7 +4,7 @@
 from json import JSONDecoder
 
 
-def to_json_string(my_str):
+def from_json_string(my_str):
     """Creates the JSON representation of an object.
     Args:
         my_obj: An object to convert to JSONte to.
