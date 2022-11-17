@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """A module containing IO functions.
 """
-from json import JSONEncoder
+from json import JSONDecoder
 
 
 def load_from_json_file(filename):
