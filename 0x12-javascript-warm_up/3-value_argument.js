@@ -7,3 +7,4 @@ if (argNum[2]) {
 } else {
   console.log('No argument');
 }
+//more arguments passed

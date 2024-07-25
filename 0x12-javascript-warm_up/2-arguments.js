@@ -14,3 +14,4 @@ switch (argNum) {
   default:
     console.log('Arguments found');
 }
+//this is still a challenge but I will practice more often
