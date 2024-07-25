@@ -7,4 +7,3 @@ if (isNaN(argNum)) {
 } else {
   console.log('My number: ' + Math.floor(argNum));
 }
-//another argument passed
